@@ -5,7 +5,7 @@ In order to run the program, the local system must have following installed:
 
 ## Steps to run the program
 * Open a terminal in the local system.
-* Clone the repository to the local environment by running `git clone []` command.
+* Clone the repository to the local environment by running `git clone https://github.com/al-noman/DeviceOwnership` command.
 * Navigate to the root directory of the downloaded repository using `cd [directory-path]`.
 * Run `./gradlew clean` and `./gradlew build` commands in that order respectively.
 * Run `./gradlew bootRun`

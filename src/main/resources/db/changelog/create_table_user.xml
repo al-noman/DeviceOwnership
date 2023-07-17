@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="create table for users" author="abdullah">
+        <createTable tableName="USERS">
+            <column name="ID" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="LAST_NAME" type="VARCHAR(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="ADDRESS" type="VARCHAR(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="BIRTH_DAY" type="DATE">
+                <constraints nullable="false" />
+            </column>
+            <column name="DEVICE_ID" type="UUID">
+                <constraints foreignKeyName="fk_device_id" references="DEVICES(ID)" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
